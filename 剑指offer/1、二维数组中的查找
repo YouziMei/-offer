@@ -8,14 +8,14 @@
 class Solution {
 public:
     bool Find(int target, vector<vector<int> > array) {
-        int rows=array.size();
-        int cols=array[0].size();
-        int i=rows-1,j=0;
+        int rows=array.size();//矩阵的行
+        int cols=array[0].size();//矩阵的列
+        int i=rows-1,j=0; //从右上角开始
         while(i>=0 && j<cols){
-            if(array[i][j]>target){
+            if(array[i][j]>target){//向左移
                 i--;
             }
-            else if(array[i][j]<target){
+            else if(array[i][j]<target){//向下移
                 j++;
             }
             else
